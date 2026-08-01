@@ -1,0 +1,38 @@
+Package: envwindowr
+Type: Package
+Title: Environmental Window Discovery for Trait Associations
+Version: 0.2.0
+Authors@R: person(
+    given = "Paul",
+    family = "Adunola",
+    email = "adunolapaul@gmail.com",
+    role = c("aut", "cre")
+    )
+Description: Finds environmental time windows whose summarized weather variables
+    are associated with phenotypic traits across environments. It accepts user-
+    supplied daily weather data, supports environment-specific seasons, fixed or
+    variable window sizes, robust validation, multiple correlation methods,
+    multiplicity adjustment, diagnostics, rankings, and publication-ready plots.
+    It also provides input templates and can retrieve historical daily weather
+    from coordinates and environment-specific season dates.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 4.1.0)
+Imports:
+    dplyr,
+    ggplot2,
+    jsonlite,
+    rlang,
+    tibble,
+    tidyr
+Suggests:
+    knitr,
+    readr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+URL: https://github.com/Pauliben/envwindowr
+BugReports: https://github.com/Pauliben/envwindowr/issues
+RoxygenNote: 7.3.3

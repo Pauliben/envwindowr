@@ -1,0 +1,28 @@
+url: https://pauliben.github.io/envwindowr/
+template:
+  bootstrap: 5
+
+reference:
+- title: Input data and weather
+  contents:
+  - write_envwindow_templates
+  - query_weather_data
+  - validate_env_inputs
+  - simulate_env_window_data
+- title: Environmental-window analysis
+  contents:
+  - scan_env_windows
+  - make_env_windows
+  - summarize_window_weather
+  - rank_env_windows
+  - diagnose_env_scan
+- title: Visualization
+  contents:
+  - starts_with("plot_")
+
+articles:
+- title: Workflows
+  navbar: Workflows
+  contents:
+  - getting-started
+  - real-data-workflow

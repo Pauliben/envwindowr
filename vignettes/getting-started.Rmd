@@ -1,0 +1,55 @@
+---
+title: "Getting started with envwindowr"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started with envwindowr}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, message=FALSE}
+library(envwindowr)
+```
+
+This short example uses simulated data. For CSV input, weather queries, and a
+complete real-data workflow, see `vignette("real-data-workflow")`.
+
+```{r}
+dat <- simulate_env_window_data(
+  n_environments = 24,
+  n_days = 140,
+  n_genotypes = 8,
+  signal_start = 45,
+  signal_end = 75
+)
+
+head(dat$phenotypes)
+head(dat$environments)
+```
+
+A **window size** is the number of consecutive weather days summarized. A
+**step size** is how many days the window moves between tests. Thus, a 28-day
+window with a 7-day step tests days 0-27, 7-34, 14-41, and so forth.
+
+```{r}
+fit <- scan_env_windows(
+  weather = dat$weather,
+  traits = dat$phenotypes,
+  periods = dat$environments,
+  weather_vars = c("temperature", "rainfall"),
+  trait_vars = c("yield", "quality"),
+  window_sizes = c(14, 28, 42),
+  step = 7,
+  summaries = c(temperature = "mean", rainfall = "sum"),
+  min_pairs = 10,
+  quiet = TRUE
+)
+
+fit
+rank_env_windows(fit, n = 3)
+diagnose_env_scan(fit)
+```
+
+```{r, fig.width=7, fig.height=5}
+plot_window_heatmap(fit, "temperature", "yield")
+```
