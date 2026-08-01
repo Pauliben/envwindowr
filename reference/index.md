@@ -1,49 +1,37 @@
 # Package index
 
-## Analysis
+## Input data and weather
 
-- [`scan_env_windows()`](https://USERNAME.github.io/envwindowr/reference/scan_env_windows.md)
+- [`write_envwindow_templates()`](https://pauliben.github.io/envwindowr/reference/write_envwindow_templates.md)
+  : Write example input files for a real-data analysis
+- [`query_weather_data()`](https://pauliben.github.io/envwindowr/reference/query_weather_data.md)
+  : Query daily historical weather for each environment
+- [`validate_env_inputs()`](https://pauliben.github.io/envwindowr/reference/validate_env_inputs.md)
+  : Validate weather, phenotype, and environment inputs
+- [`simulate_env_window_data()`](https://pauliben.github.io/envwindowr/reference/simulate_env_window_data.md)
+  : Simulate example weather, phenotype, and environment data
+
+## Environmental-window analysis
+
+- [`scan_env_windows()`](https://pauliben.github.io/envwindowr/reference/scan_env_windows.md)
+  [`print(`*`<env_window_scan>`*`)`](https://pauliben.github.io/envwindowr/reference/scan_env_windows.md)
   : Scan environmental windows for trait associations
-- [`rank_env_windows()`](https://USERNAME.github.io/envwindowr/reference/rank_env_windows.md)
-  : Rank the strongest environmental windows
-- [`diagnose_env_scan()`](https://USERNAME.github.io/envwindowr/reference/diagnose_env_scan.md)
-  : Diagnose scan quality and common failure modes
-
-## Inputs and windows
-
-- [`validate_env_inputs()`](https://USERNAME.github.io/envwindowr/reference/validate_env_inputs.md)
-  : Validate weather, trait, and period inputs
-- [`make_env_windows()`](https://USERNAME.github.io/envwindowr/reference/make_env_windows.md)
+- [`make_env_windows()`](https://pauliben.github.io/envwindowr/reference/make_env_windows.md)
   : Create candidate environmental windows
-- [`summarize_window_weather()`](https://USERNAME.github.io/envwindowr/reference/summarize_window_weather.md)
+- [`summarize_window_weather()`](https://pauliben.github.io/envwindowr/reference/summarize_window_weather.md)
   : Summarize daily weather for one candidate window
+- [`rank_env_windows()`](https://pauliben.github.io/envwindowr/reference/rank_env_windows.md)
+  : Rank the strongest environmental windows
+- [`diagnose_env_scan()`](https://pauliben.github.io/envwindowr/reference/diagnose_env_scan.md)
+  : Diagnose scan quality and common failure modes
 
 ## Visualization
 
-- [`envwindowr-package`](https://USERNAME.github.io/envwindowr/reference/envwindowr.md)
-  [`envwindowr`](https://USERNAME.github.io/envwindowr/reference/envwindowr.md)
-  [`scan_env_windows`](https://USERNAME.github.io/envwindowr/reference/envwindowr.md)
-  [`validate_env_inputs`](https://USERNAME.github.io/envwindowr/reference/envwindowr.md)
-  [`make_env_windows`](https://USERNAME.github.io/envwindowr/reference/envwindowr.md)
-  [`summarize_window_weather`](https://USERNAME.github.io/envwindowr/reference/envwindowr.md)
-  [`rank_env_windows`](https://USERNAME.github.io/envwindowr/reference/envwindowr.md)
-  [`diagnose_env_scan`](https://USERNAME.github.io/envwindowr/reference/envwindowr.md)
-  [`plot_window_heatmap`](https://USERNAME.github.io/envwindowr/reference/envwindowr.md)
-  [`plot_top_windows`](https://USERNAME.github.io/envwindowr/reference/envwindowr.md)
-  [`plot_best_window_scatter`](https://USERNAME.github.io/envwindowr/reference/envwindowr.md)
-  [`plot_window_profile`](https://USERNAME.github.io/envwindowr/reference/envwindowr.md)
-  [`simulate_env_window_data`](https://USERNAME.github.io/envwindowr/reference/envwindowr.md)
-  : Environmental Window Discovery for Trait Associations
-- [`plot_best_window_scatter()`](https://USERNAME.github.io/envwindowr/reference/plot_best_window_scatter.md)
-  : Scatter plot for one selected environmental window
-- [`plot_top_windows()`](https://USERNAME.github.io/envwindowr/reference/plot_top_windows.md)
-  : Plot top-ranked windows
-- [`plot_window_heatmap()`](https://USERNAME.github.io/envwindowr/reference/plot_window_heatmap.md)
+- [`plot_best_window_scatter()`](https://pauliben.github.io/envwindowr/reference/plot_best_window_scatter.md)
+  : Plot phenotype against weather for a selected window
+- [`plot_top_windows()`](https://pauliben.github.io/envwindowr/reference/plot_top_windows.md)
+  : Plot top-ranked environmental windows
+- [`plot_window_heatmap()`](https://pauliben.github.io/envwindowr/reference/plot_window_heatmap.md)
   : Plot a correlation heatmap across window starts and ends
-- [`plot_window_profile()`](https://USERNAME.github.io/envwindowr/reference/plot_window_profile.md)
-  : Plot correlation by window start for a selected size
-
-## Examples
-
-- [`simulate_env_window_data()`](https://USERNAME.github.io/envwindowr/reference/simulate_env_window_data.md)
-  : Simulate example weather and trait data with a known signal
+- [`plot_window_profile()`](https://pauliben.github.io/envwindowr/reference/plot_window_profile.md)
+  : Plot correlation by window start for one window size

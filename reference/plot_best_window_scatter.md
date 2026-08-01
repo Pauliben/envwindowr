@@ -1,6 +1,8 @@
-# Scatter plot for one selected environmental window
+# Plot phenotype against weather for a selected window
 
-Scatter plot for one selected environmental window
+Recalculates one selected environmental-window summary and plots it
+against an environment-level trait mean. A fitted linear regression is
+added as a visual aid.
 
 ## Usage
 
@@ -29,32 +31,45 @@ plot_best_window_scatter(
 
 - traits:
 
-  Trait data.
+  Phenotype data. Rows are averaged within environment.
 
 - periods:
 
-  Period table.
+  Environment metadata with season start and end dates.
 
 - weather_var:
 
-  Weather variable.
+  One numeric weather variable.
 
 - trait:
 
-  Trait variable.
+  One numeric phenotype trait.
 
 - start_offset, end_offset:
 
-  Selected offsets.
+  Selected window offsets relative to season start.
 
 - summary:
 
-  Summary statistic.
+  Summary statistic for the weather variable.
 
 - environment_col, date_col, period_start_col, period_end_col:
 
-  Column names.
+  Input column names.
 
 ## Value
 
-A ggplot object.
+A \`ggplot\` object.
+
+## Examples
+
+``` r
+dat <- simulate_env_window_data(n_environments = 16, n_days = 100,
+                                signal_start = 30, signal_end = 55)
+plot_best_window_scatter(
+  dat$weather, dat$traits, dat$periods,
+  weather_var = "temperature", trait = "yield",
+  start_offset = 28, end_offset = 55
+)
+#> `geom_smooth()` using formula = 'y ~ x'
+```
